@@ -125,14 +125,11 @@ export const IndexPageTemplate = ({
          <div>
            <Hero image={image} title={title} subheading={subheading}></Hero>
            <BlogRoll />
-           <Link className="btn" to="/blog">
-             Read more
-           </Link>
-           <div className="column is-12">
+           {/* <div className="column is-12">
              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
              <p>{description}</p>
            </div>
-           <Features gridItems={intro.blurbs} />
+           <Features gridItems={intro.blurbs} /> */}
          </div>
        );
 
