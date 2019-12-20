@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
+import { Wrapper, Title } from "../../components/StyledComponents";
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
@@ -14,7 +15,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         subheading={data.subheading}
         description={data.description}
         intro={data.intro || { blurbs: [] }}
-        mainpitch={data.mainpitch || {}}
       />
     )
   } else {
