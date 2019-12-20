@@ -7,16 +7,42 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    const postStyle = {
+      width: 320,
+      height: 180,
+      margin: "auto",
+      lineHeight: 100,
+      background: "gray",
+      overflow: "hidden",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center"
+    };
 
     return (
-      <div className="">
+      <div
+        className="feed"
+        style={{
+          display: "flex",
+          width: "100%",
+          minHeight: "100vh",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="" key={post.id}>
+            <div className="post" key={post.id} style={postStyle}>
               <article
                 className={`blog-list-item ${
                   post.frontmatter.featuredpost ? "is-featured" : ""
-                }`}
+                  }`}
+                style={{
+                  width: "100%"
+                }}
               >
                 <header>
                   {post.frontmatter.featuredimage ? (
@@ -38,6 +64,9 @@ class BlogRoll extends React.Component {
               </article>
             </div>
           ))}
+        <Link className="btn" style={postStyle} to="/blog">
+          Read more
+        </Link>
       </div>
     );
   }
