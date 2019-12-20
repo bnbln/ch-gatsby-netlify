@@ -12,7 +12,6 @@ class BlogRoll extends React.Component {
       height: 180,
       margin: "auto",
       lineHeight: 100,
-      background: "gray",
       overflow: "hidden",
       display: "flex",
       flexDirection: "column",

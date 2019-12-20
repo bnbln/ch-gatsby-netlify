@@ -76,14 +76,14 @@ class Navbar extends React.Component {
               style={{ width: "1em", height: "1em" }}
             />
           </a>
-          <a title="twitter" className="navbar-item" href="https://twitter.com">
+          {/* <a title="twitter" className="navbar-item" href="https://twitter.com">
             <img
               className="fas fa-lg"
               src={twitter}
               alt="Twitter"
               style={{ width: "1em", height: "1em" }}
             />
-          </a>
+          </a> */}
           <a
             className="navbar-item"
             title="instagram"

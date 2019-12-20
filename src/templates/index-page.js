@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
-import styled from "styled-components"
 import Typed from "typed.js";
 import * as Vibrant from "node-vibrant";
 
@@ -39,7 +38,8 @@ class Hero extends React.Component {
             backgroundImage: `url(${
               !!image.childImageSharp ? image.childImageSharp.fluid.src : image
             })`,
-            backgroundPosition: `top left`,
+            backgroundPosition: `top center`,
+            backgroundSize: "cover",
             backgroundAttachment: `fixed`,
             height: "100vh",
             minHeight: "300px",
@@ -55,9 +55,8 @@ class Hero extends React.Component {
             <h1
               className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
               style={{
-                boxShadow:
-                  "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                backgroundColor: "rgb(255, 68, 0)",
+                boxShadow: "black 0.5rem 0px 0px, black -0.5rem 0px 0px",
+                backgroundColor: "black",
                 color:
                   this.state.palette != null
                     ? this.state.palette.Vibrant.bodyTextColor
@@ -69,7 +68,7 @@ class Hero extends React.Component {
               <TypedReact strings={[subheading, title]} />
             </h1>
           </div>
-          <a onClick={() => console.log(col1) }>
+          <a onClick={() => console.log(col1)}>
             <img
               src={Svg}
               alt="Down"
