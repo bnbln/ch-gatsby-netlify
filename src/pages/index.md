@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Title of the Page
 subheading: Motion Design
-image: /img/home-jumbotron.jpg
+image: /img/some-balls-bild.png
 heading: Great coffee with a conscience
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
